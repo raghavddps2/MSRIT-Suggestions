@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
-
-const PORT = process.env.PORT || config.httpPort;
+const usual = 8080;
+const PORT = process.env.PORT || usual;
 app.set('view engine','pug');
 app.set('views','views');
 const addSuggRoute = require('./routes/addSuggestion');
