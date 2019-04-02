@@ -11,3 +11,4 @@ router.get('/view-suggesstions',(req,res,next)=>{
     res.render('viewSuggesstion',{suggs: suggestion,docTitle: 'View Suggestions'});
     
 });
+module.exports = router;

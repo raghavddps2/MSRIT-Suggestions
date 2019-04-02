@@ -15,7 +15,7 @@ const rootDir = require('./util/path');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(rootDir,'public')));
 app.use(addSuggRoute.routes);
-// app.use(viewSuggRoute);
+app.use(viewSuggRoute);
 
 
 
