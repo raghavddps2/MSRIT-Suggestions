@@ -1,0 +1,83 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title #{docTitle}
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+    meta(content='', name='keywords')
+    meta(content='', name='description')
+    // Favicons
+   
+    // Bootstrap CSS File
+    link(href='lib/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // Libraries CSS Files
+    link(href='lib/font-awesome/css/font-awesome.min.css', rel='stylesheet')
+    link(href='lib/animate/animate.min.css', rel='stylesheet')
+    link(href='lib/ionicons/css/ionicons.min.css', rel='stylesheet')
+    link(href='lib/owlcarousel/assets/owl.carousel.min.css', rel='stylesheet')
+    link(href='lib/lightbox/css/lightbox.min.css', rel='stylesheet')
+    // Compiled and minified CSS
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
+    // Compiled and minified JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
+    // Main Stylesheet File
+    link(href='css/style.css', rel='stylesheet')
+    //
+      =======================================================
+      Theme Name: DevFolio
+      Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+      Author: BootstrapMade.com
+      License: https://bootstrapmade.com/license/
+      =======================================================
+  body#page-top
+    // / Nav Star /
+    nav#mainNav.navbar.navbar-b.navbar-trans.navbar-expand-md.fixed-top
+      .container
+        a.navbar-brand.js-scroll(href='#page-top') MSRIT Suggest
+        button.navbar-toggler.collapsed(type='button', data-toggle='collapse', data-target='#navbarDefault', aria-controls='navbarDefault', aria-expanded='false', aria-label='Toggle navigation')
+          span
+          span
+          span
+        #navbarDefault.navbar-collapse.collapse.justify-content-end
+          ul.navbar-nav
+            li.nav-item
+              a.nav-link.js-scroll.active(href='/') Home
+            li.nav-item
+              a.nav-link.js-scroll(href='/view-suggesstions') View Sugestions
+            li.nav-item
+              a.nav-link.js-scroll(href='/add-suggesstion') Add suggestions
+    // / Nav End /
+    br
+    br
+    br
+    br
+    .row
+      each sug in suggs
+        .col.s12.m6
+          .card.purple.darken-1.darken-1
+            .card-content.white-text
+              span.card-title #{sug.title}
+              p #{sug.message}
+                
+            .card-action
+              a(href='#') #{sug.tag}
+              a(href='#') #{sug.department}
+    // / Section Contact-footer End /
+    a.back-to-top(href='#')
+      i.fa.fa-chevron-up
+    #preloader
+    // JavaScript Libraries
+    script(src='lib/jquery/jquery.min.js')
+    script(src='lib/jquery/jquery-migrate.min.js')
+    script(src='lib/popper/popper.min.js')
+    script(src='lib/bootstrap/js/bootstrap.min.js')
+    script(src='lib/easing/easing.min.js')
+    script(src='lib/counterup/jquery.waypoints.min.js')
+    script(src='lib/counterup/jquery.counterup.js')
+    script(src='lib/owlcarousel/owl.carousel.min.js')
+    script(src='lib/lightbox/js/lightbox.min.js')
+    script(src='lib/typed/typed.min.js')
+    // Contact Form JavaScript File
+    script(src='contactform/contactform.js')
+    // Template Main Javascript File
+    script(src='js/main.js')
