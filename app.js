@@ -14,8 +14,8 @@ const rootDir = require('./util/path');
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(rootDir,'public')));
-app.get(addSuggRoute.routes);
-app.get(viewSuggRoute);
+app.use(addSuggRoute.routes);
+// app.use(viewSuggRoute);
 
 
 
@@ -25,6 +25,6 @@ app.get('/',(req,res,next)=>{
 });
 
 app.use((req,res,next)=>{
-    res.status(404).sendFile(path.join(rootDir,'views','404.html'));
+    res.status(404).render('404');
 });
 app.listen(3000);
